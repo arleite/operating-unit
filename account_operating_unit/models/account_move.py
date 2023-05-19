@@ -76,8 +76,9 @@ class AccountMove(models.Model):
         states={"draft": [("readonly", False)]},
     )
 
-    @api.onchange("invoice_line_ids")
-    def _onchange_invoice_line_ids(self):
+    @api.onchange('invoice_line_ids')
+    def _onchange_quick_edit_line_ids(self):
+        res = super()._onchange_quick_edit_line_ids()
         if self.operating_unit_id:
             for line in self.line_ids:
                 line.operating_unit_id = self.operating_unit_id
