@@ -132,7 +132,6 @@
                     string="Operating Unit"
                     name="operating_unit_grouped"
                     icon="terp-folder-orange"
-                    domain="[]"
                     groups="operating_unit.group_multi_operating_unit"
                     context="{'group_by':'operating_unit_id'}"
                 />
