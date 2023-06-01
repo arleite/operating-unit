@@ -35,9 +35,15 @@
                     />
                 </t>
                 <t t-else="">
-                    <span t-if="company.company_details" t-field="company.company_details"></span>
-                    <span t-else="" t-field="company.partner_id"
-                            t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                    <span
+                        t-if="company.company_details"
+                        t-field="company.company_details"
+                    />
+                    <span
+                        t-else=""
+                        t-field="company.partner_id"
+                        t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'
+                    />
                 </t>
             </div>
         </xpath>
@@ -64,7 +70,7 @@
                         />: <span t-field="o.operating_unit_id.partner_id.vat" /></li>
                 </t>
                 <t t-else="">
-                    <div t-field="company.report_footer"/>
+                    <div t-field="company.report_footer" />
                 </t>
             </ul>
         </xpath>
@@ -101,7 +107,10 @@
                     />
                 </t>
                 <t t-else="">
-                    <span t-if="company.company_details" t-field="company.company_details"></span>
+                    <span
+                        t-if="company.company_details"
+                        t-field="company.company_details"
+                    />
                 </t>
             </div>
         </xpath>
@@ -148,7 +157,11 @@
                 />
             </t>
             <t t-else="">
-                <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" alt="Logo"/>
+                <img
+                    t-if="company.logo"
+                    t-att-src="image_data_uri(company.logo)"
+                    alt="Logo"
+                />
             </t>
         </xpath>
         <xpath expr="//div[@name='company_address']" position="replace">
@@ -161,40 +174,57 @@
                     />
                 </t>
                 <t t-else="">
-                    <span t-if="company.company_details" t-field="company.company_details"></span>
+                    <span
+                        t-if="company.company_details"
+                        t-field="company.company_details"
+                    />
                 </t>
             </div>
         </xpath>
-        <xpath expr="//div[hasclass('row')]/div[hasclass('col-4')][1]" position="replace">
+        <xpath
+            expr="//div[hasclass('row')]/div[hasclass('col-4')][1]"
+            position="replace"
+        >
             <div class="col-4">
                 <t t-if="o and 'operating_unit_id' in o.fields_get()">
                     <ul class="list-inline">
                         <li
                             t-if="o.operating_unit_id.partner_id.phone"
                             class="list-inline-item"
-                        >Tel: <span t-field="o.operating_unit_id.partner_id.phone" /></li>
+                        >Tel: <span
+                                t-field="o.operating_unit_id.partner_id.phone"
+                            /></li>
                         <li
                             t-if="o.operating_unit_id.partner_id.email"
                             class="list-inline-item"
-                        >Mail: <span t-field="o.operating_unit_id.partner_id.email" /></li>
+                        >Mail: <span
+                                t-field="o.operating_unit_id.partner_id.email"
+                            /></li>
                         <li
                             t-if="o.operating_unit_id.partner_id.website"
                             class="list-inline-item"
-                        >Web: <span t-field="o.operating_unit_id.partner_id.website" /></li>
+                        >Web: <span
+                                t-field="o.operating_unit_id.partner_id.website"
+                            /></li>
                         <li
                             t-if="o.operating_unit_id.partner_id.vat"
                             class="list-inline-item"
                         ><t
                                 t-esc="o.operating_unit_id.partner_id.country_id.vat_label or 'Tax ID'"
-                            />: <span t-field="o.operating_unit_id.partner_id.vat" /></li>
+                            />: <span
+                                t-field="o.operating_unit_id.partner_id.vat"
+                            /></li>
                     </ul>
                 </t>
                 <t t-else="">
-                   <span t-field="company.report_footer"/>
+                   <span t-field="company.report_footer" />
                 </t>
             </div>
         </xpath>
-        <xpath expr="//div[hasclass('row')]/div[hasclass('col-4')][2]" position="replace">
+        <xpath
+            expr="//div[hasclass('row')]/div[hasclass('col-4')][2]"
+            position="replace"
+        >
             <div class="col-4">
                 <t t-if="o and 'operating_unit_id' in o.fields_get()">
                    <div
@@ -203,7 +233,10 @@
                     />
                 </t>
                 <t t-else="">
-                    <span t-if="company.company_details" t-field="company.company_details"/>
+                    <span
+                        t-if="company.company_details"
+                        t-field="company.company_details"
+                    />
                 </t>
             </div>
         </xpath>
@@ -224,7 +257,12 @@
                 />
             </t>
             <t t-else="">
-                <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" class="float-start" alt="Logo"/>
+                <img
+                    t-if="company.logo"
+                    t-att-src="image_data_uri(company.logo)"
+                    class="float-start"
+                    alt="Logo"
+                />
             </t>
         </xpath>
         <xpath expr="//div[hasclass('company_address')]" position="replace">
@@ -236,7 +274,10 @@
                     />
                 </t>
                 <t t-else="">
-                    <span t-if="company.company_details" t-field="company.company_details"></span>
+                    <span
+                        t-if="company.company_details"
+                        t-field="company.company_details"
+                    />
                 </t>
             </div>
         </xpath>
@@ -263,7 +304,7 @@
                         />: <span t-field="o.operating_unit_id.partner_id.vat" /></li>
                 </t>
                 <t t-else="">
-                    <div t-field="company.report_footer"/>
+                    <div t-field="company.report_footer" />
                 </t>
             </ul>
         </xpath>

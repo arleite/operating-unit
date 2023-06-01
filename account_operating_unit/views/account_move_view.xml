@@ -65,8 +65,11 @@
                     options="{'no_create': True}"
                     groups="operating_unit.group_multi_operating_unit"
                 />
-                <field name="operating_unit_id" invisible="1"
-                    groups="!operating_unit.group_multi_operating_unit"/>
+                <field
+                    name="operating_unit_id"
+                    invisible="1"
+                    groups="!operating_unit.group_multi_operating_unit"
+                />
             </xpath>
             <field name="invoice_line_ids" position="attributes">
                 <attribute name="context">
